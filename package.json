@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create the front and back end of a todo app",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"

@@ -1,9 +1,13 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const connectDB = require("./DB/connect");
-require("dotenv").config();
+import { connectDB } from "./DB/connect.js";
+import { router as task } from "./router/task.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const port = 5000;
+app.use("/api/v1/tasks", task);
+app.use(express.json());
 
 const start = async () => {
   try {
@@ -13,7 +17,7 @@ const start = async () => {
     console.log(error);
   }
 };
-start()
+start();
 
 app.get("/", (req, res) => {
   res.status(200).json({ title: "Home" });
