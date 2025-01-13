@@ -6,8 +6,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const port = 5000;
-app.use("/api/v1/tasks", task);
-app.use(express.json());
 
 const start = async () => {
   try {
@@ -22,3 +20,5 @@ start();
 app.get("/", (req, res) => {
   res.status(200).json({ title: "Home" });
 });
+app.use(express.json());
+app.use("/api/v1/tasks", task);

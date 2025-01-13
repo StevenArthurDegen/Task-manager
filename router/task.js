@@ -9,6 +9,6 @@ import {
 } from "../controller/task.js";
 
 router.route("/").get(allTask).post(createTask);
-router.route("/:id").get(oneTask).patch(updateTask).delete(deleteTask);
+router.route("/:_id").get(oneTask).patch(updateTask).delete(deleteTask);
 
 export { router };

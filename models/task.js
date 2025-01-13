@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const {Schema} = mongoose
+const { Schema } = mongoose;
 const TaskSchema = new Schema({
   name: {
     type: String,
@@ -13,6 +13,6 @@ const TaskSchema = new Schema({
   },
 });
 
-const Task = mongoose.model("Task", TaskSchema)
+const Task = mongoose.model("Task", TaskSchema);
 
-export {Task}
+export { Task };
